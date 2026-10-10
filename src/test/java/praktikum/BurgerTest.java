@@ -1,3 +1,4 @@
+
 package praktikum;
 
 import org.junit.Test;
@@ -93,10 +94,10 @@ public class BurgerTest {
 
         String actualReceipt = burger.getReceipt();
 
-        String expectedReceipt = "(==== black bun ====)\r\n" +
-                "= sauce hot sauce =\r\n" +
-                "(==== black bun ====)\r\n" +
-                "\r\nPrice: 250,000000\r\n";
+        String expectedReceipt = String.format("(==== black bun ====)%n" +
+                "= sauce hot sauce =%n" +
+                "(==== black bun ====)%n" +
+                "%nPrice: %f%n", 250f);
 
         assertEquals(expectedReceipt, actualReceipt);
     }
